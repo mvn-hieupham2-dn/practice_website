@@ -1,0 +1,53 @@
+.background {
+    background-color: red;
+  }
+  
+  .background[data-background] {
+    background-color: attr(data-background color, blue);
+  }
+.calc {
+    width: calc(100% - 300px);
+    background-color: lightblue;
+    padding: 5px;
+    text-align: center;
+  }
+.rgb{
+    background-color: rgb(149, 226, 194);
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+  }
+.rgba{
+    background-color: rgba(255,0,0,0.3);
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+}
+.rotate{
+    background-color: rgba(255,0,0,0.3);
+    margin-top: 40px;
+    width: 300px;
+    transform: rotate(10deg);
+    height: 50px;
+}
+.scale{
+    background-color: rgb(149, 226, 194);
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+    transform: scale(1,2);
+}
+.translate{
+    background-color: rgb(149, 226, 194);
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+  transform:   translate(42px, 18px);
+}
+.liner{
+    
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+    background-image: linear-gradient(red, yellow);
+}

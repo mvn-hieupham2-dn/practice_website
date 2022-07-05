@@ -4,138 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <h1 class="title">Bài tập JS</h1>
-            <div class="practices">
-                
-                <div class="test1">
-                    <h3 class="name_test">Câu 1: What are the differences between a variable that is: `null`, `undefined`?</h3>
-                    <p>undefined : là khai báo một biến nhưng chưa gán giá trị cho nó 
-                       <br> ví dụ let a; <br>
-                        null: là giá trị rộng hoặc là giá trị không tồn tại;
-                       <br> ví dụ test = null;                        
-                        </p>
-                </div>
-                <div class="test2">
-                    <h3 class="name_test">Câu 2:  What is `use strict`? what are the advantages and disadvantages to using it?</h3>
-                    <p>'use stric' là dòng lệnh được sử dụng để quy định về các rule trong js, <br>những đoạn code dưới 
-                        use stric sẽ được quản lý nghiêm ngặc về cú pháp
-                        ví dụ khi chưa use stric: <br>
-                        x = 10 <br>
-                        console.log(window.x);<br>
-                        => màn hình hiển thị 10
-                        <br>
-                        khi sài use stric
-                        <br>
-                        x = 10 
-                        console.log(window.x);<br>
-                        => màn hình hiển thị x is not defind
-
-                        </p>
-                        <p>
-                            lợi ích: <br>
-                            - Dễ dàng fix bugs <br>
-                            - Dễ bảo trì code, giúp người đọc dễ dàng hiểu được code <br>
-                            bất lợi: <br>
-                            - Mất đi tính tự do của JS <br>
-                            - Viết code dài dòng hơn <br>
-                            - Strict mode còn một số lỗi chưa được khắc phục <br> 
-                        </p>
-                </div>
-                <div class="test3">
-                    <h3 class="name_test">Câu 3:  What are the differences between `==` and `===`? Write an example for each case (if any)?</h3>
-                    <p>undefined : là khai báo một biến nhưng chưa gán giá trị cho nó 
-                       <br> ví dụ let a; <br>
-                        null: là giá trị rộng hoặc là giá trị không tồn tại;
-                       <br> ví dụ test = null;                        
-                        </p>
-                </div>
-                <div class="test4">
-                    <h3 class="name_test">Câu 4: Give a list of `Falsy` values in Javascript.</h3>
-                    <p>Bao gồm: undefined, null, NaN, 0, '' </p>
-                </div>
-                <div class="test1">
-                    <h3 class="name_test">Câu 5: Give an example for each of the following methods in Javascript</h3>
-                    <p>undefined : là khai báo một biến nhưng chưa gán giá trị cho nó 
-                       <br> ví dụ let a; <br>
-                        null: là giá trị rộng hoặc là giá trị không tồn tại;
-                       <br> ví dụ test = null;                        
-                        </p>
-                </div>
-                <div class="test5">
-                    <h3 class="name_test">Câu 1</h3>
-                    <p>undefined : là khai báo một biến nhưng chưa gán giá trị cho nó 
-                       <br> ví dụ let a; <br>
-                        null: là giá trị rộng hoặc là giá trị không tồn tại;
-                       <br> ví dụ test = null;                        
-                        </p>
-                </div>
-                <div class="test6">
-                    <h3 class="name_test">Câu 6:Give an example for each of the following methods in Javascript
-                        + map <br>
-                        + filter<br>
-                        + reduce<br>
-                        + find<br>
-                        + some<br>
-                      - Give an example for add a new element to an array[] (at the end)<br>
-                      - Give an example for add a new element to an array[] (at the beginning)<br>
-                      - Give an example for removing an element in array[]<br>
-                        <br>
-                    </h3>
-                    <h4> Example Map:</h4>
-                    <p id="show_result">Result:</p>
-                    <h4> Example filter:</h4>
-                    <p id="show_result-filter">Result:</p>
-                    <h4> Example Reduce:</h4>
-                    <p id="show_result-reduce">Result:</p>
-                    <h4> Example Find:</h4>
-                    <p id="show_result-find">Result:</p>
-                    <h4> Add a new element to an array[] (at the end) Find:</h4>
-                    <p id="show_result-end">Result:</p>
-                    <h4> Add a new element to an array[] (at the begin) Find:</h4>
-                    <p id="show_result-begin">Result:</p>
-                    <h4> Add a new element to an array[] (at the begin) Find:</h4>
-                    <p id="show_result-rm2">Result:</p>
-                    <h4> Remo a  element to an array[] (at the end) Find:</h4>
-                    <p id="show_result-rm">Result:</p>
-                    
-                </div>
-                <div class="test7">
-                    <h2>### Playground</h=>
-                    <h3 class="name_test">
-                        1. Write a JavaScript program to compute the sum of the two given integers.
-                         If the two values are same, then returns triple their sum.
-                    </h3>
-                    <p id="show_result-pl-1">Result: </p>
-                    <h3 class="name_test">
-                        2. Write a JavaScript program to compute the absolute difference between a specified number and 19. <br>
- Returns triple their absolute difference if the specified number is greater than 19.
-                    </h3>
-                    <p id="show_result-pl-2">Result: </p>
-                    <h3 class="name_test">
-                        3. A masked number is a string that consists of digits and one asterisk (*) that should be 
-                        replaced by exactly one digit.
-                        <br> Given a masked number find all the possible options to replace the asterisk with 
-                         a digit to produce an integer divisible by 3.
-                    </h3>
-                    <p id="show_result-pl-3">Result: </p>
-                    <h3 class="name_test">
-                        4. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. <br> Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 6.
-                    </h3>
-                    <p id="show_result-pl-4">Result: </p>
-                </div>
-
-            </div>
+    <header class="header">
+        <div class="container-fluid">
+            <nav class="nav-bar">
+                <ul class="nav-bar-left">
+                <li class="item"><a href="#" class="item-link">Demo</a></li>
+                <li class="item"><a href="#" class="item-link">Shop</a></li>
+                <li class="item"><a href="#" class="item-link">Product</a></li>
+                <li class="item"><a href="#" class="item-link">Blog</a></li></ul>
+                <h1 class="nav-bar-center">
+                    Kalles
+                </h1>
+                <ul class="nav-bar-right"><a href="/Cart.html" class="nav-right-link">
+                    <i class="ti-shopping-cart icon-cart">
+                        <span class="numPro sum-product">0</span>
+                    </i>
+                </a></ul>
+            </nav>
+            <!-- header img -->         
         </div>
-    </div>
-    <script src="./script.js"></script>
+    </header>
+    <!-- product -->
+    <section class="product">
+        <div class="container">
+            <h2 class="title">Best Seller</h2>
+            <ul class="product-list" >
+                            
+            </ul>
+        </div>
+    </section>
+    <script src="./product.js"></script>
 </body>
 </html>

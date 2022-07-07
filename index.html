@@ -13,126 +13,234 @@
 <body>
     <div class="header">
         <div class="container">
-            <h1 class="title">Bài tập JS</h1>
+            <h1 class="title">Bài tập JS day 3</h1>
             <div class="practices">
                 
                 <div class="test1">
-                    <h3 class="name_test">Câu 1: What are the differences between a variable that is: `null`, `undefined`?</h3>
-                    <p>undefined : là khai báo một biến nhưng chưa gán giá trị cho nó 
-                       <br> ví dụ let a; <br>
-                        null: là giá trị rộng hoặc là giá trị không tồn tại;
-                       <br> ví dụ test = null;                        
+                    <h3 class="name_test">Câu 1:
+                        var MAX_SIZE = 25 * 1024 * 1024; <br>
+                        var title = 'Hello World'; <br>
+                        title = 'Hello ES6' <br>
+                         <br> Question: Let and <strong> Const </strong>  – What's the Difference?</h3>
+                    <p>   MAX_SIZE = 25 * 1024 * 1024; <br>       
+                        var title = 'Hello World'; <br>       
+                        title = 'Hello ES6' <br>       
+                       <br>
+                       convert to ES6: <br>
+                       <strong> const </strong>  MAX_SIZE = 25 * 1024 * 1024;   <br>
+                       <strong> let </strong> title = 'Hello World'; <br>
+                       title = 'Hello ES6'     <br>
+                       difference between <strong> let </strong> and <strong> Const </strong> <br>
+                       <strong> let </strong> có thể cập nhật lại giá trị nhưng không thể khai báo lại trong cùng một phạm vi <br>
+                       <strong> let </strong> có thể khai báo mà không cần khởi tạo  <br>
+                       <strong> let </strong> không thể truy cập mà không không khởi tạo và sẽ trả về một lỗi <br>
+                       <strong> const </strong>  không thể cập nhật lại giá trị và không thể khai báo lại trong cùng một phạm vi   <br>
+                       <strong> const </strong>  không thể khai báo khi không cần khởi tạo  <br>
+                       <strong> const </strong>  không thể truy cập mà không không khởi tạo <br>        
                         </p>
                 </div>
                 <div class="test2">
-                    <h3 class="name_test">Câu 2:  What is `use strict`? what are the advantages and disadvantages to using it?</h3>
-                    <p>'use stric' là dòng lệnh được sử dụng để quy định về các rule trong js, <br>những đoạn code dưới 
-                        use stric sẽ được quản lý nghiêm ngặc về cú pháp
-                        ví dụ khi chưa use stric: <br>
-                        x = 10 <br>
-                        console.log(window.x);<br>
-                        => màn hình hiển thị 10
+                    <h3 class="name_test">Câu 2: String Interpolation
+                        - ES5 <br>
+                       
+                        var user = { name: 'David' }; <br>
+                        var card = { amount: 7, product: "Bar", unitprice: 42 }; <br>
+                        var message = "Hello " + user.name + ",\n" + <br>
+                        "want to buy " + card.amount + " " + card.product + " for\n" + <br>
+                        "a total of " + (card.amount * card.unitprice) + " bucks?"; <br>
                         <br>
-                        khi sài use stric
+                        </h3>
+                       <p> let user = { name: 'David'} <br>
+                        let card = { amount: 7, product: "Bar", unitprice: 42 }; <br>
+                        let message = `Hello ` + ${user.name}  <br>
+                        want to buy ${card.amount} card.product <br>
+                        a total of ${card.amount * card.unitprice} bucks? ` <br>
                         <br>
-                        x = 10 
-                        console.log(window.x);<br>
-                        => màn hình hiển thị x is not defind
-
-                        </p>
-                        <p>
-                            lợi ích: <br>
-                            - Dễ dàng fix bugs <br>
-                            - Dễ bảo trì code, giúp người đọc dễ dàng hiểu được code <br>
-                            bất lợi: <br>
-                            - Mất đi tính tự do của JS <br>
-                            - Viết code dài dòng hơn <br>
-                            - Strict mode còn một số lỗi chưa được khắc phục <br> 
-                        </p>
+                    </p>
                 </div>
                 <div class="test3">
-                    <h3 class="name_test">Câu 3:  What are the differences between `==` and `===`? Write an example for each case (if any)?</h3>
-                    <p>undefined : là khai báo một biến nhưng chưa gán giá trị cho nó 
-                       <br> ví dụ let a; <br>
-                        null: là giá trị rộng hoặc là giá trị không tồn tại;
-                       <br> ví dụ test = null;                        
-                        </p>
+                    <h3 class="name_test">3. Rest Parameter
+                        - ES5 <br>
+                        ```
+                        function foo(x, y) {<br>
+                            var a = Array.prototype.slice.call(arguments, 2);<br>
+                            return (x + y) * a.length;<br>
+                        };<br>
+                        foo(1, 2, 'hello', true, 7) === 9;<br>
+                        ```<br>
+                      </h3>
+                      <p>
+                        - ES6 <br>
+                        ```
+                        function foo(x,y,...rest) {<br>
+                           
+                            return (x + y) * rest.length;<br>
+                        };<br>
+                        foo(1, 2, 'hello', true, 7) === 9;<br>
+                        ```<br>
+                      </p>
                 </div>
                 <div class="test4">
-                    <h3 class="name_test">Câu 4: Give a list of `Falsy` values in Javascript.</h3>
-                    <p>Bao gồm: undefined, null, NaN, 0, '' </p>
+                    <h3 class="name_test">4. Default Parameter Values<br>
+                        - ES5<br>
+                        ```
+                        function sum(x, y, z) {<br>
+                          if (y === undefined) {<br>
+                            y = 7;<br>
+                          }<br>
+                          if (z === undefined) {<br>
+                            z = 42;<br>
+                          }<br>
+                          return x + y + z;<br>
+                        };<br>
+                        ```
+                      ​</h3>
+                      <p>
+                        - ES6<br>
+                        ```
+                        function sum(x, y=7, z=42) {<br>
+                          if (y === undefined) {<br>
+                            y = 7;<br>
+                          }<br>
+                          if (z === undefined) {<br>
+                            z = 42;<br>
+                          }<br>
+                          return x + y + z;<br>
+                        };<br>
+                      </p>
                 </div>
-                <div class="test1">
-                    <h3 class="name_test">Câu 5: Give an example for each of the following methods in Javascript</h3>
-                    <p>undefined : là khai báo một biến nhưng chưa gán giá trị cho nó 
-                       <br> ví dụ let a; <br>
-                        null: là giá trị rộng hoặc là giá trị không tồn tại;
-                       <br> ví dụ test = null;                        
-                        </p>
-                </div>
+            
                 <div class="test5">
-                    <h3 class="name_test">Câu 1</h3>
-                    <p>undefined : là khai báo một biến nhưng chưa gán giá trị cho nó 
-                       <br> ví dụ let a; <br>
-                        null: là giá trị rộng hoặc là giá trị không tồn tại;
-                       <br> ví dụ test = null;                        
+                    <h3 class="name_test">Câu 5: 5. Arrow Functions<br>
+                        - ES5<br>
+                        ```
+                        var evens = [1, 2, 3, 4, 5, 6];<br>
+                        var odds  = evens.map(function (v) { return v + 1; });<br>
+                        var pairs = evens.map(function (v) { return { even: v, odd: v + 1 }; });<br>
+                        var nums  = evens.map(function (v, i) { return v + i; });<br>
+                        var fives = [];<br>
+                        nums.forEach(function (v) {<br>
+                          if (v % 5 === 0) {<br>
+                            fives.push(v);<br>
+                          }<br>
+                        });<br>
+                        ```
+                      ​</h3>
+                    <p>   
+                        - ES6<br>
+                        ```
+                        let evens = [1, 2, 3, 4, 5, 6];<br>
+                        let odds  = evens.map((v) => { return v + 1; });<br>
+                        let pairs = evens.map((v) => { return { even: v, odd: v + 1 }; });<br>
+                        let nums  = evens.map((v, i) => { return v + i; });<br>
+                        let fives = [];<br>
+                        nums.forEach((v) => {<br>
+                          if (v % 5 === 0) {<br>
+                            fives.push(v);<br>
+                          }<br>
+                        });<br>      
                         </p>
                 </div>
                 <div class="test6">
-                    <h3 class="name_test">Câu 6:Give an example for each of the following methods in Javascript
-                        + map <br>
-                        + filter<br>
-                        + reduce<br>
-                        + find<br>
-                        + some<br>
-                      - Give an example for add a new element to an array[] (at the end)<br>
-                      - Give an example for add a new element to an array[] (at the beginning)<br>
-                      - Give an example for removing an element in array[]<br>
-                        <br>
+                    <h3 class="name_test">Câu 6:Classes <br>
+                        - ES5 <br>
+                        ```
+                        var Shape = function(id, x, y) { <br>
+                          this.id = id; <br>
+                          this.move(x, y); <br>
+                        };
+                        Shape.prototype.move = function(x, y) { <br>
+                          this.x = x; <br>
+                          this.y = y; <br>
+                        }; <br>
+                       ​
                     </h3>
-                    <h4> Example Map:</h4>
-                    <p id="show_result">Result:</p>
-                    <h4> Example filter:</h4>
-                    <p id="show_result-filter">Result:</p>
-                    <h4> Example Reduce:</h4>
-                    <p id="show_result-reduce">Result:</p>
-                    <h4> Example Find:</h4>
-                    <p id="show_result-find">Result:</p>
-                    <h4> Add a new element to an array[] (at the end) Find:</h4>
-                    <p id="show_result-end">Result:</p>
-                    <h4> Add a new element to an array[] (at the begin) Find:</h4>
-                    <p id="show_result-begin">Result:</p>
-                    <h4> Add a new element to an array[] (at the begin) Find:</h4>
-                    <p id="show_result-rm2">Result:</p>
-                    <h4> Remo a  element to an array[] (at the end) Find:</h4>
-                    <p id="show_result-rm">Result:</p>
-                    
+                    <p class="name_test">Câu 6:Classes <br>
+                        - ES6 <br>
+                        ```
+                        class Shape{ <br>
+                        constructor(id, x, y) {<br>
+                          this.id = id; <br>
+                          this.move(x, y); <br>
+                        };
+                       move(x, y) { <br>
+                          this.x = x; <br>
+                          this.y = y; <br>
+                        }; <br>
+                    }; <br>      
+                    </p>                                     
                 </div>
                 <div class="test7">
-                    <h2>### Playground</h=>
                     <h3 class="name_test">
-                        1. Write a JavaScript program to compute the sum of the two given integers.
-                         If the two values are same, then returns triple their sum.
+                        7. Modules <br>
+                        - ES5<br>
+                      
+                         lib/utils.js<br>
+                        Utils = {};
+                        Utils.sum = function(x, y) { return x + y };<br>
+                        Utils.pi = 3.141593;<br>
+                       someApp.js<br>
+                        var math = Utils;<br>
+                        console.log("2π = " + math.sum(math.pi, math.pi));<br>
+                      
+                        otherApp.js<br>
+                        var sum = Utils.sum, pi = Utils.pi;<br>
+                        console.log('2π = ' + sum(pi, pi));<br>
                     </h3>
-                    <p id="show_result-pl-1">Result: </p>
-                    <h3 class="name_test">
-                        2. Write a JavaScript program to compute the absolute difference between a specified number and 19. <br>
- Returns triple their absolute difference if the specified number is greater than 19.
-                    </h3>
-                    <p id="show_result-pl-2">Result: </p>
-                    <h3 class="name_test">
-                        3. A masked number is a string that consists of digits and one asterisk (*) that should be 
-                        replaced by exactly one digit.
-                        <br> Given a masked number find all the possible options to replace the asterisk with 
-                         a digit to produce an integer divisible by 3.
-                    </h3>
-                    <p id="show_result-pl-3">Result: </p>
-                    <h3 class="name_test">
-                        4. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. <br> Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 6.
-                    </h3>
-                    <p id="show_result-pl-4">Result: </p>
                 </div>
-
+                <div class="test8">
+                    <h3 class="name_test">
+                        8. Promise <br>
+                        - ES5<br>
+                        ```
+                        function showMessAfterTimeout(msg, who, timeout, onDone) {<br>
+                          setTimeout(function () {<br>
+                            onDone(msg + ' Hi ' + who + '!');<br>
+                          }, timeout);<br>
+                        }
+                        showMessAfterTimeout('', 'Foo', 100, function(msg) {<br>
+                          showMessAfterTimeout(msg, 'Bar', 200, function(msg) {<br>
+                            console.log('Finish after 300ms:' + msg);<br>
+                          });<br>
+                        });<br>
+                        ```
+                    </h3>
+                    <p>
+                        - ES6<br>
+                        ```
+                        let showMessAfterTimeout(who, timeout)  = () => {<br>
+                        return new Promise((resolve, reject)=>{
+                            return  setTimeout(() =>{<br>
+                                onDone(msg + ' Hi ' + who + '!');<br>
+                              }, timeout);<br>
+                        })
+                        }
+                        showMessAfterTimeout('Foo', 100)<br>
+                        .then((msg1) => {<br>
+                            return showMessAfterTimeout('Bar', 200).then((msg) => {<br>
+                                return msg1 + ' ' + msg;<br>
+                            });<br>
+                        })<br>
+                        .then((msg) => console.log(`Finish after 300ms: ${msg}`));<br>
+                    </p>
+                </div>
+                <div class="test9">
+                    <h3 class="name_test">
+                        ​
+                        9. Loops <br>
+                          - Give an example for each method: <br>
+                            + for…of<br>
+                            + findIndex()<br>
+                    </h3>
+                    <p>
+                        let arr1 = [5,10,20];<br>
+                        for (let item of arr1) {<br>
+                        console.log(item);<br>
+                        } <br>
+                      <strong>Example findIndex </strong> <br>
+                        arr1.findIndex((item) => item % 2 === 0); <br>
+                    </p>
+                    </div>
             </div>
         </div>
     </div>

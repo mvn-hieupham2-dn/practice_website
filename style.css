@@ -1,0 +1,12 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 3px;
+}
+.title{
+    text-align: center;
+    color: #FFC300;
+}
+p{
+    font-weight: 550;
+    line-height: 20px;
+}
